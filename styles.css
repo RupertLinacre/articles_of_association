@@ -298,15 +298,29 @@ p {
     margin-bottom: 15px;
 }
 
-
 .bard-image {
-    position: fixed;
-    top: 30px;
-    right: 30px;
+    display: block;
+    margin: 0 auto 20px auto;
     height: 100px;
-    z-index: 200000;
-    /* Increased z-index to ensure visibility */
+    z-index: 100;
     cursor: pointer;
     opacity: 0.8;
-    /* Slightly transparent to blend with the document */
+    filter: sepia(1) hue-rotate(320deg) saturate(3.0) brightness(0.7);
+    /* This filter combination creates the rgb(92, 30, 18) color effect */
+    transition: transform 0.3s ease;
+}
+
+.bard-image:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@keyframes rockingBard {
+    0% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    100% { transform: rotate(-5deg); }
+}
+
+.bard-image.playing {
+    animation: rockingBard 1s infinite ease-in-out;
 }

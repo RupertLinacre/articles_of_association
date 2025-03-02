@@ -16,10 +16,14 @@
     <script>
         function playAudio() {
             const audio = document.getElementById('bardAudio');
+            const bardImage = document.querySelector('.bard-image');
+
             if (audio.paused) {
                 audio.play();
+                bardImage.classList.add('playing');
             } else {
                 audio.pause();
+                bardImage.classList.remove('playing');
             }
         }
     </script>

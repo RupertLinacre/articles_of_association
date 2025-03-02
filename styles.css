@@ -9,7 +9,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+
 }
 
 .page {
@@ -20,7 +20,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border: 1px solid #d9c7a7;
     position: relative;
-    background-image: url('https://www.transparenttextures.com/patterns/old-paper.png');
+
     border-radius: 5px;
     /* Enhanced parchment effect */
     background-blend-mode: multiply;
